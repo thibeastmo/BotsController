@@ -20,7 +20,7 @@ namespace BotsController
         private const string HomeDir = "/home/alex/";
         private const string BeastBotsDir = "Beast-Bots/";
         private const string DiabloBotsDir = "Bot-Galactic-Swamp/";
-        private const string RetrieveDiabloProcessesCmd = "ps -ef | grep '/home/alex/Bot-Galactic-Swamp' | tr -s ' ' | cut -d ' ' -f 2,9 | grep -v '.pyenv\\|grep\\|-c\\|/bin/bash'";
+        private const string RetrieveDiabloProcessesCmd = "ps -ef | grep '/home/alex/Bot-Galactic-Swamp' | grep  -Ev 'grep|-c|/bin/bash' | tr -s ' ' | cut -d ' ' -f 2,9";
         // private const string RetrieveDiabloProcessesCmd = "ps -ef | grep '" + HomeDir + ".pyenv/versions/3.11.0/bin/python3.11' | tr -s ' ' | cut -d ' ' -f 2,9 | grep -v '.pyenv\\|grep\\|-c\\|/bin/bash'";
         // private const string RetrieveBeastProcessCmd = "ps -ef | grep 'x' | tr -s ' ' | cut -d ' ' -f 2,10";
         private const string RetrieveBeastProcessCmd = "ps -ef | grep 'x' | tr -s ' '";
